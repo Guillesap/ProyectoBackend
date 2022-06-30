@@ -1,0 +1,164 @@
+Statistical profiling result from isolate-000001A976FF5220-15564-v8.log, (7117 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   6891   96.8%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    214    3.0%          G:\node.exe
+      4    0.1%          C:\WINDOWS\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.0%   25.0%  RegExp: [ \t]*<%_
+      1    0.0%   12.5%  Function: ^processPromiseRejections node:internal/process/promises:197:34
+      1    0.0%   12.5%  Function: ^normalizeEncoding node:internal/util:160:27
+      1    0.0%   12.5%  Function: ^getObserverType node:internal/perf/observe:117:25
+      1    0.0%   12.5%  Function: ^Long.fromBits C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\bson\lib\long.js:88:30
+      1    0.0%   12.5%  Function: ^<anonymous> node:_http_outgoing:564:45
+      1    0.0%   12.5%  Function: ^<anonymous> file:///C:/Users/saca-/Desktop/Coderhouse/BACKEND/Desafio%20clase%2032/src/routes/login.js:7:16
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      8    0.1%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      7    0.1%   87.5%  GC
+   7109   99.9%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   6891   96.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    214    3.0%  G:\node.exe
+    153   71.5%    G:\node.exe
+     33   21.6%      Function: ^compileFunction node:vm:308:25
+     33  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     32   97.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+     31   96.9%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    3.1%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    3.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     17   11.1%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     17  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     15   88.2%          Function: ^Socket._writeGeneric node:net:769:42
+     15  100.0%            Function: ^Socket._write node:net:806:35
+      1    5.9%          LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:283:16
+      1    5.9%          LazyCompile: *_write node:internal/streams/writable:283:16
+      1  100.0%            Function: ^Writable.write node:internal/streams/writable:333:36
+      7    4.6%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      6   85.7%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1   16.7%          LazyCompile: ~lazyLoadStreams node:fs:2843:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:2986:17
+      1   16.7%          Function: ~<anonymous> node:tls:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          Function: ~<anonymous> node:http:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          Function: ~<anonymous> node:crypto:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          Function: ~<anonymous> node:child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   16.7%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      6    3.9%      Function: ^realpathSync node:fs:2410:22
+      6  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      6  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      6  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      5    3.3%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      4   80.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      4  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      4  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   20.0%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      5    3.3%      Function: ^readSync node:fs:684:18
+      5  100.0%        Function: ^tryReadSync node:fs:429:21
+      5  100.0%          Function: ^readFileSync node:fs:450:22
+      3   60.0%            Function: ^fileLoader C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:290:20
+      1   20.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   20.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      4    2.6%      Function: ^compile C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:569:21
+      4  100.0%        Function: ^compile C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:379:35
+      4  100.0%          Function: ^handleCache C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:208:21
+      4  100.0%            Function: ^tryHandleCache C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:252:24
+      3    2.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1   33.3%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   33.3%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   33.3%          Function: ~<anonymous> node:internal/bootstrap/pre_execution:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    2.0%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      3  100.0%        Function: ^Socket._writeGeneric node:net:769:42
+      3  100.0%          Function: ^Socket._writev node:net:801:36
+      2   66.7%            Function: ^doWrite node:internal/streams/writable:398:17
+      1   33.3%            LazyCompile: ~doWrite node:internal/streams/writable:398:17
+      3    2.0%      Function: ^resOnFinish node:_http_server:788:21
+      2   66.7%        LazyCompile: *emit node:events:470:44
+      2  100.0%          Function: ^onFinish node:_http_outgoing:828:18
+      2  100.0%            Function: ^callback node:internal/streams/writable:550:44
+      1   33.3%        Function: ^emit node:events:470:44
+      1  100.0%          Function: ^onFinish node:_http_outgoing:828:18
+      1  100.0%            Function: ^callback node:internal/streams/writable:550:44
+      2    1.3%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1160:39
+      2  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2    1.3%      LazyCompile: *next C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:176:16
+      1   50.0%        Function: ^session C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express-session\index.js:179:26
+      1  100.0%          LazyCompile: *trim_prefix C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:288:23
+      1  100.0%            LazyCompile: *next C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:176:16
+      1   50.0%        Function: ^handle C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:136:31
+      1  100.0%          Function: ^router C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:46:18
+      1  100.0%            Function: ^handle C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\layer.js:86:49
+      2    1.3%      LazyCompile: *compile C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:569:21
+      2  100.0%        Function: ^compile C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:379:35
+      2  100.0%          Function: ^handleCache C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:208:21
+      2  100.0%            Function: ^tryHandleCache C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:252:24
+      2    1.3%      G:\node.exe
+      1   50.0%        Function: ~<anonymous> C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\engine.io\node_modules\debug\src\node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   50.0%        Function: ^pipe C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\send\index.js:510:43
+      1  100.0%          Function: ^serveStatic C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\serve-static\index.js:72:31
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:288:23
+      2    1.3%      Function: ^statSync node:fs:1530:18
+      2  100.0%        Function: ^tryStat C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\view.js:174:17
+      2  100.0%          Function: ^resolve C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\view.js:146:42
+      2  100.0%            Function: ^lookup C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\view.js:104:40
+      2    1.3%      Function: ^randomFillSync node:internal/crypto/random:110:24
+      2  100.0%        Function: ^randomBytes node:internal/crypto/random:90:21
+      2  100.0%          Function: ^randomBytesSync C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\random-bytes\index.js:72:25
+      2  100.0%            Function: ^uidSync C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\uid-safe\index.js:75:18
+      2    1.3%      Function: ^openSync node:fs:576:18
+      2  100.0%        Function: ^readFileSync node:fs:450:22
+      1   50.0%          Function: ^fileLoader C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:290:20
+      1  100.0%            Function: ^handleCache C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\ejs\lib\ejs.js:208:21
+      1   50.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2    1.3%      Function: ^getColorDepth node:internal/tty:106:23
+      2  100.0%        Function: ^value node:internal/console/constructor:300:20
+      2  100.0%          Function: ^value node:internal/console/constructor:321:20
+      2  100.0%            Function: ^log node:internal/console/constructor:359:6
+      2    1.3%      Function: ^compression C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\compression\index.js:59:31
+      2  100.0%        LazyCompile: *trim_prefix C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:288:23
+      2  100.0%          LazyCompile: *next C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\express\lib\router\index.js:176:16
+      2  100.0%            Function: ^strategy.pass C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\passport\lib\middleware\authenticate.js:345:31
+      2    1.3%      Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1   50.0%            Function: ~<anonymous> C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\send\index.js:1:1
+      1   50.0%            Function: ~<anonymous> C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 32\node_modules\fs-extra\lib\move\index.js:1:1
+

@@ -1,0 +1,1 @@
+2022/04/19 21:56:40 [error] 784#10668: *1 CreateFile() "C:\Users\saca-\Desktop\Coderhouse\BACKEND\Desafio clase 30\src\nginx/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
