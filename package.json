@@ -5,9 +5,10 @@
   "description": "Desafio clase 32",
   "main": "API RESTful.js",
   "scripts": {
-    "start": "0x server.js",
+    "start": "npm run build && node dist/server.js -- cluster",
     "test": "node src/utils/autocannon.js"
   },
+
   "engines": {
     "node": "16.14.0"
   },
