@@ -5,7 +5,7 @@
   "description": "Desafio clase 32",
   "main": "API RESTful.js",
   "scripts": {
-    "start": " node server.js",
+    "start": " node server.js --cluster",
     "dev": "nodemon server.js",
     "dev cluster": "nodemon server.js--modo=cluster"
   },
